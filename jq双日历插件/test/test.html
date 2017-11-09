@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../dateRange.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../dateRange.css"/>
+
+
+</head>
+<body>
+<!--<div class="ta_date" id="div_date_demo3">
+    <span class="date_title" id="date"></span>
+    <a class="opt_sel" id="input_trigger_demo3" href="#">
+        <i class="i_orderd"></i>
+    </a>
+</div>-->
+
+<input type="text" id="date" />
+
+<script type="text/javascript">
+    console.log(111111111111)
+    var dateRange = new pickerDateRange('date', {
+        startDate : '2013-04-14',
+        endDate : '2013-04-21',
+        //needCompare : true,
+        //isSingleDay : true,
+        //shortOpr : true,
+        defaultText : ' 至 ',
+        theme : 'ta',
+        success : function(obj) {
+            //$("#dCon_demo3").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+            console.log(222222222222222222)
+        }
+    });
+
+
+    var a = 5, b = 10;
+
+    function tag(strings, ...a) {
+        console.log(arguments,'arguments')
+        console.log(strings[0]);    // "Hello "
+        console.log(strings[1]);    // " world"
+        console.log(strings[2]);    // ""
+//        console.log(values[0]);     // 15
+//        console.log(values[1]);     // 50
+
+        console.log(a);
+        console.log(typeof a[0]);
+
+        return "Anything";
+    }
+
+    tag`Hello ${a + b} world ${a * b}`;
+
+</script>
+
+</body>
+</html>
